@@ -42,7 +42,7 @@
         <section class="hero">
             <div class="hero-container">
               <h1 class="idea">Эффективные решения <br> для вашего бизнеса</h1>
-              <a class="request" href="">Заказать услугу</a>
+              <button class="request" type="button" data-toggle-backdrop-request >Заказать услугу</button>
             </div>
         </section>
         <!--Преимущества-->
@@ -343,5 +343,15 @@
             </div>
         </div>
     </footer>
+    <div data-backdrop-request class="backdrop-request is-hidden">
+        <div class="modal-request">
+            <button class="button-close" data-toggle-backdrop-request >
+                <svg class="close-icon" width="11" height="11">
+                    <use href="./img/symbol-defs.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./model.js"></script>
 </body>
 </html>

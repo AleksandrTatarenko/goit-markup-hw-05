@@ -8,6 +8,8 @@
   --text-adress: rgba(255, 255, 255, 0.6);
   --footer-icon-background: rgba(255, 255, 255, 0.1);
   --icon: #afb1b8;
+  --animation-dur: 250ms;
+  --animation-type: linear;
 }
 
 body {
@@ -29,8 +31,11 @@ a {
 
 /*header*/
 .header-border {
+  top: -1px;
+  position: sticky;
   min-width: 1200px;
   border-bottom: 1px solid #ececec;
+  background-color: var(--text-hero);
 }
 .container {
   box-sizing: border-box;
@@ -48,7 +53,7 @@ a {
   display: inline-flex;
 }
 .header-nav {
-  height: 31px;
+  min-height: 31px;
   justify-content: center;
   align-items: center;
 }
@@ -77,16 +82,34 @@ a {
   margin-right: 275px;
 }
 .link {
+  position: relative;
   font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-h);
+  transition: color var(--animation-dur) var(--animation-type);
 }
 .link:hover,
 .link:focus {
   color: var(--text-focus);
+}
+.link::after {
+  content: '';
+  position: absolute;
+  top: 44.5px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--text-focus);
+  opacity: 0;
+}
+.link:hover::after,
+.link:focus::after {
+  opacity: 1;
+  transition: opacity var(--animation-dur) var(--animation-type);
 }
 .connection {
   display: flex;
@@ -99,6 +122,7 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-p);
+  transition: color var(--animation-dur) var(--animation-type);
 }
 .connection:hover,
 .connection:focus {
@@ -196,6 +220,7 @@ address {
   border-radius: 50%;
   background-color: var(--footer-icon-background);
   color: var(--text-hero);
+  transition: background-color var(--animation-dur) var(--animation-type);
 }
 .link-footer:hover,
 .link-footer:focus {
