@@ -12,10 +12,6 @@
   --animation-dur: 250ms;
   --animation-type: linear;
 }
-/*header*/
-.main-page {
-  color: var(--text-focus);
-}
 /*Main*/
 .body {
   margin: 0;

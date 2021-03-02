@@ -73,7 +73,19 @@ a {
   color: var(--text-h);
 }
 .main-page {
+  position: relative;
   color: var(--text-focus);
+}
+.main-page::after {
+  content: '';
+  position: absolute;
+  top: 44.5px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--text-focus);
+  opacity: 1;
 }
 .nav-list .list-item:not(:last-child) {
   margin-right: 50px;
