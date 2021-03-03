@@ -118,7 +118,7 @@ button:focus {
   width: 100%;
   height: 100%;
   background-color: var(--background-overlay);
-  transform: translateY(100%);
+  transform: translateY(-100%);
   transition: transform var(--animation-dur) var(--animation-type);
 }
 .overlay-text {

@@ -413,11 +413,15 @@
   opacity: 0;
   pointer-events: none;
 }
+.backdrop-request.is-hidden .modal-request {
+  transform: translateX(-50%) translateY(-200%);
+}
 .modal-request {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+  transition: transform var(--animation-dur) var(--animation-type);
   width: 528px;
   height: 581px;
   background-color: var(--text-hero);
